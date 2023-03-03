@@ -1,15 +1,81 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* * This is a manifest file that'll be compiled into application.css, which will * include all the files listed below. * * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any * plugin's vendor/assets/stylesheets directory can be referenced here using a * relative path. * * You're free to add application-wide styles to this file and they'll appear * at the bottom of the compiled file so the styles you add here take * precedence over styles defined in any other CSS/SCSS files in this * directory. Styles in this file should be added after the last require_* * statement. It is generally better to create a new file per style scope. * *= require_tree . *= require_self */
+body {
+    margin: 0;
+    padding: 0;
+}
+header.main {
+    text-align: center;
+    background: #282;
+    margin: 0;
+}
+@media (min-width: 30em) {
+    header.main {
+        text-align: left;
+   }
+}
+header.main h1 {
+    display: none;
+}
+.notice, #notice {
+    background: #ffb;
+    border-radius: 0.5em;
+    border: solid 0.177em #882;
+    color: #882;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: 1em 1.414em;
+    text-align: center;
+}
+.content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+@media (min-width: 30em) {
+    .content {
+        flex-direction: row;
+        -webkit-box-orient: horizontal;
+   }
+}
+.content nav {
+    padding-bottom: 1em;
+    background: #141;
+    text-align: center;
+}
+@media (min-width: 30em) {
+    .content nav {
+        text-align: left;
+        padding: 1em;
+   }
+}
+.content nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+@media (min-width: 30em) {
+    .content nav ul {
+        padding-right: 1em;
+   }
+}
+.content nav ul li {
+    margin: 0;
+    padding: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.354em;
+}
+.content nav ul li a {
+    color: #bfb;
+    text-decoration: none;
+}
+.content nav ul li a:hover {
+    background: none;
+    color: white;
+}
+.content main {
+    padding: 0.5em;
+}

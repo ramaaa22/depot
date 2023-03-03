@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Depot</title>
+    <title>Pragprog Books Online Store</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,8 +11,20 @@
   </head>
 
   <body>
-    <main class ='<%= controller.controller_name %>'>
-      <%= yield %>
-    <main>
+    <header class ="main">
+      <%= image_tag 'logo.svg', alt: 'Books' %>
+      <h1> <%= @page_title %> </h1>
+    </header>
+    <section class="content">
+        <nav class="side_nav">
+          <ul>
+            <li> <%= link_to 'Home' , store_index_path %> </li>
+            <li> <%= link_to 'Products' , products_path %> </li>
+          </ul>
+        </nav>
+      <main class ='<%= controller.controller_name %>'>
+        <%= yield %>
+      <main>
+    </section>
   </body>
 </html>
